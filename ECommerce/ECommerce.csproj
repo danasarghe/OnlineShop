@@ -169,22 +169,90 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ShoppingCartController.cs" />
+    <Compile Include="Controllers\StoreController.cs" />
+    <Compile Include="Controllers\StoreManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202002151256510_Initial.cs" />
+    <Compile Include="Migrations\202002151256510_Initial.designer.cs">
+      <DependentUpon>202002151256510_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Brand.cs" />
+    <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetail.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\SampleData.cs" />
+    <Compile Include="Models\ShoppingCart.cs" />
+    <Compile Include="Models\StoreEntities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\ShoppingCartRemoveViewModel.cs" />
+    <Compile Include="ViewModels\ShoppingCartViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\adidas.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\cart_logo.png" />
+    <Content Include="Content\home_running.jpeg" />
+    <Content Include="Content\Images\adidas_casual_men_2.jpg" />
+    <Content Include="Content\Images\adidas_casual_men_3.jpg" />
+    <Content Include="Content\Images\adidas_casual_women_1.jpg" />
+    <Content Include="Content\Images\converse_casual_kids_1.jpg" />
+    <Content Include="Content\Images\converse_casual_kids_2.jpg" />
+    <Content Include="Content\Images\converse_casual_kids_3.jpg" />
+    <Content Include="Content\Images\converse_casual_kids_4.jpg" />
+    <Content Include="Content\Images\converse_casual_kids_5.jpg" />
+    <Content Include="Content\Images\converse_casual_men_1.jpg" />
+    <Content Include="Content\Images\converse_casual_men_2.jpg" />
+    <Content Include="Content\Images\nike_men_casual_1.jpg" />
+    <Content Include="Content\Images\nike_men_casual_2.jpg" />
+    <Content Include="Content\Images\nike_men_casual_3.jpg" />
+    <Content Include="Content\Images\nike_men_casual_4.jpg" />
+    <Content Include="Content\Images\nike_women_casual_1.jpg" />
+    <Content Include="Content\Images\nike_women_casual_2.jpg" />
+    <Content Include="Content\Images\running_adidas_men_1.jpg" />
+    <Content Include="Content\Images\running_adidas_men_2.jpg" />
+    <Content Include="Content\Images\running_adidas_men_3.jpg" />
+    <Content Include="Content\Images\running_adidas_women_1.jpg" />
+    <Content Include="Content\Images\running_adidas_women_2.jpg" />
+    <Content Include="Content\Images\running_nike_men_1.jpg" />
+    <Content Include="Content\Images\running_nike_men_2.jpg" />
+    <Content Include="Content\Images\running_nike_men_3.jpg" />
+    <Content Include="Content\Images\running_nike_men_4.jpg" />
+    <Content Include="Content\Images\running_nike_women_2.jpg" />
+    <Content Include="Content\Images\running_nike_zomen_1.jpg" />
+    <Content Include="Content\Images\sebago_men_1.jpg" />
+    <Content Include="Content\Images\sebago_men_2.jpg" />
+    <Content Include="Content\Images\sebago_men_3.jpg" />
+    <Content Include="Content\Images\sebago_men_4.jpg" />
+    <Content Include="Content\Images\sebago_men_5.jpg" />
+    <Content Include="Content\Images\sebago_men_6.jpg" />
+    <Content Include="Content\Images\sebago_women_1.jpg" />
+    <Content Include="Content\Images\sebago_women_2.jpg" />
+    <Content Include="Content\Images\sebago_women_3.jpg" />
+    <Content Include="Content\Images\sebago_women_4.jpg" />
+    <Content Include="Content\Images\sebago_women_5.jpg" />
+    <Content Include="Content\Images\sebago_women_6.jpg" />
+    <Content Include="Content\logosite.jpg" />
+    <Content Include="Content\logoSite.png" />
+    <Content Include="Content\pexels-photo-2065747.jpeg" />
+    <Content Include="Content\photo-1.jpg" />
+    <Content Include="Content\red-sneakers.jpg" />
+    <Content Include="Content\search_logo.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -236,6 +304,21 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\StoreManager\Create.cshtml" />
+    <Content Include="Views\StoreManager\Delete.cshtml" />
+    <Content Include="Views\StoreManager\Details.cshtml" />
+    <Content Include="Views\StoreManager\Edit.cshtml" />
+    <Content Include="Views\StoreManager\Index.cshtml" />
+    <Content Include="Views\Store\Browse.cshtml" />
+    <Content Include="Views\Store\Details.cshtml" />
+    <Content Include="Views\Store\GenreMenu.cshtml" />
+    <Content Include="Views\Store\GenreMenuDropDown.cshtml" />
+    <Content Include="Views\Store\Search.cshtml" />
+    <Content Include="Views\Store\Index.cshtml" />
+    <Content Include="Views\Checkout\AddressAndPayment.cshtml" />
+    <Content Include="Views\ShoppingCart\CartSummary.cshtml" />
+    <Content Include="Views\ShoppingCart\Index.cshtml" />
+    <Content Include="Views\ShoppingCart\Review.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -252,6 +335,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202002151256510_Initial.resx">
+      <DependentUpon>202002151256510_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

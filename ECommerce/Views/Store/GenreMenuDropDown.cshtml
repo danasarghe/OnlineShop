@@ -1,0 +1,20 @@
+﻿@model IEnumerable<ECommerce.Models.Genre>
+@{
+    ViewBag.Title = "GenreMenuDropDown";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GenreMenuDropDown</h2>
+@foreach (var genre in Model)
+{
+    <a id="dropDown" href="@Url.Action("Browse", "Store", new { Genre = genre.Name })">@genre.Name</a>
+}
+
+<style type="text/css">
+
+    #dropDown {
+        height: 36px;
+        color: white;
+    }
+</style>
+
